@@ -1,0 +1,220 @@
+:root{
+    --cor1: #cbf1eb;
+    --cor2: #12C4E6;
+    --cor3: #1281E6;
+    --cor4: #1C02E6;
+    --cor5: #090039;
+    --fonte1: "Play", sans-serif; 
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor1);
+    font-family: var(--fonte1);
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /* cria o degradê */
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: rgb(0, 0, 0, 0.267);
+}
+
+/* para o título ficar centralizado e responsivo */
+header > p{
+    color: white;
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: rgb(0, 0, 0, 0.315);
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 20px;
+    box-shadow: 2px 2px 0px rgb(0, 0, 0, 0.363); /* faz a sombra em baixo no nav */
+}
+
+nav > a{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+nav > a:hover{
+    background-color: var(--cor3);
+    color: white;
+}
+
+main{
+    padding: 20px;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1 {
+    color: var(--cor5);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+
+main h2{
+    color: var(--cor4);
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+main strong{
+    color: var(--cor5);
+    font-weight: bold;
+    padding: 2px 6px;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+main > img2{
+    width: 10%;
+    display: block;
+    margin: auto;
+}
+
+.galeria {
+  display: flex;          /* coloca lado a lado */
+  gap: 20px;              /* espaço entre as imagens */
+  justify-content: center; /* centraliza no container */
+  flex-wrap: wrap;        /* permite quebrar linha quando precisar */
+}
+
+.galeria img {
+  width: 400px;  /* largura fixa */
+  height: auto;
+}
+
+/* Responsivo: quando a tela for menor que 768px, empilha */
+@media (max-width: 768px) {
+  .galeria {
+    flex-direction: column; /* muda para coluna */
+    align-items: center;    /* centraliza */
+  }
+
+  .galeria img {
+    width: 90%; /* ocupa quase toda a tela no celular */
+  }
+}
+
+div.video{
+    background-color: var(--cor4);
+    margin-bottom: 30px;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.270);
+}
+
+aside > ul{
+    list-style-position: inside;
+
+}
+
+aside > h2{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+footer{
+    background-image: linear-gradient(to bottom, var(--cor1), white);
+    background-color: var(--cor1);
+    color: black;
+    text-align: center;
+    font-size: 1.0em;
+    padding: 5px;
+}
+
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.footer_container {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;           /* reduz o espaçamento */
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.img_footer {
+    width: 60px; 
+    transition: transform .2s ease-in-out;
+}
+.img_footer:hover {
+    transform: scale(1.15);  /* aumenta levemente a imagem */
+}
+
+
+
+
+
+
+
+
+
