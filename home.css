@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #3b34ff;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  background-color: #3b34ff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #3b34ff;
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* PARALLAX REAL */
+.parallax {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.parallax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("img/2150169850.jpg");
+  background-size: cover;
+  background-position: center;
+
+  transform: translate3d(0, var(--parallax-offset, 0px), 0);
+  will-change: transform;
+  z-index: -1;
+}
+
+
+/* CARDS */
+.cards-section {
+  padding: 60px 20px;
+  background: #3b34ff;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #ffffffa2;
+  color: #000;
+  width: 260px;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #3b34ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  border-top: 2px solid #2f29cc;
+}
+
+.footer-left p {
+  font-size: 18px;
+}
+
+.footer-center {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-center a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer-center a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
