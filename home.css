@@ -11,11 +11,20 @@ body {
   overflow-x: hidden;
 }
 
-/* HERO */
+/* ============================
+      HERO (TELA INTEIRA)
+============================ */
 .hero {
+  height: 100vh;
   background-color: #3b34ff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
-  padding: 80px 20px;
+  padding: 20px;
 }
 
 .hero h1 {
@@ -33,28 +42,142 @@ body {
   font-weight: bold;
 }
 
-/* PARALLAX REAL */
-.parallax {
-  position: relative;
-  height: 600px;
-  overflow: hidden;
+
+/* ============================
+      TEXTO PRINCIPAL
+============================ */
+.txt {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  line-height: 1.7;
+  font-size: 1.1rem;
 }
 
-.parallax::before {
+.txt h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.txt p {
+  text-align: justify;
+  font-weight: 300;
+}
+
+@media (min-width: 1200px) {
+  .txt {
+    font-size: 1.2rem;
+    padding: 40px 50px;
+  }
+
+  .txt h2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .txt {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  .txt h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* ============================
+      PARALLAX REAL (CORRIGIDO)
+============================ */
+
+/* Seção normal */
+section.normal {
+  background-color: white;
+  color: black;
+}
+
+/* Seção com efeito parallax */
+section.imagem {
+  position: relative;
+  color: white;
+  background-color: rgb(73, 73, 73);
+  min-height: 100vh;         /* garante que a imagem não seja cortada */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Caixa de texto sobre a imagem */
+section.imagem > p {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 0px black;
+  position: relative;
+  z-index: 2;  /* sempre na frente */
+  font-size: 1.9rem;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Camada da imagem */
+section.imagem::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("img/2150169850.jpg");
+  background-image: var(--bg-image);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-
-  transform: translate3d(0, var(--parallax-offset, 0px), 0);
+  transform: translate3d(0, 0, 0);
   will-change: transform;
-  z-index: -1;
+  z-index: -1; /* Fica atrás do texto */
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+  section { font-size: 5.8vw; }
+  section.imagem { min-height: 60vh; }
 }
 
 
-/* CARDS */
+/* PARALLAX JS DESATIVADO (fallback) */
+.no-parallax section.imagem::before {
+  transform: none !important;
+  background-attachment: scroll !important;
+}
+
+
+/* ============================
+      TXT2 (NÃO SOBE NA IMAGEM)
+============================ */
+.txt2 {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  max-width: 900px;
+  margin: 60px auto 60px auto;
+  padding: 20px 30px;
+  color: #ffffff;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+
+/* ============================
+      CARDS
+============================ */
 .cards-section {
   padding: 60px 20px;
   background: #3b34ff;
@@ -86,7 +209,10 @@ body {
   margin: 10px 0;
 }
 
-/* FOOTER */
+
+/* ============================
+      FOOTER
+============================ */
 .footer {
   background-color: #3b34ff;
   display: flex;
@@ -126,4 +252,3 @@ body {
   height: 24px;
   cursor: pointer;
 }
-
