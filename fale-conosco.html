@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Fale Conosco | Tecnologia e História</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="fale-conosco.css">
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.rede-de-computadores.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- HEADER SIMPLES -->
+  <header class="topo">
+    <h1>Fale Conosco</h1>
+    <p>Envie sua dúvida, sugestão ou mensagem</p>
+  </header>
+
+  <a href="index.html" class="btn-voltar">← Voltar para a página inicial</a>
+
+  <!-- FORMULÁRIO -->
+  <main class="container">
+
+    <form class="form-contato">
+      
+      <div class="campo">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+      </div>
+
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="seuemail@email.com" required>
+      </div>
+
+      <div class="campo">
+        <label for="assunto">Assunto</label>
+        <input type="text" id="assunto" placeholder="Dúvida, sugestão, feedback...">
+      </div>
+
+      <div class="campo">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+      </div>
+
+      <button type="submit">Enviar mensagem</button>
+
+    </form>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 – Tecnologia que transforma</p>
+  </footer>
+
+</body>
+</html>
